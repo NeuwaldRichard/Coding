@@ -5,6 +5,8 @@ que temos para prestar um determinado servico.
 '''
 ## Lista de Bugs ##
 #1º quando e apertado enter somente e nao digitado o valor ( nao corrigido ainda ) tentar algo com condicao if
+#2º corrigido erro quando digitado valor zero, adicionando a condicional if valor == 0, porem agora se vc digitar o dividendo
+#ele vai dar o valor dele mesmo ao invez de dar zero
 
 
 print(15*'=-=')
@@ -32,6 +34,18 @@ troca_pneu = float(input('Quantos Km voce rodou ate a troca dos pneus? '))
 print('')
 km = float(input('Diga quantos Km rodou no ultimo mes que vou fazer uma previsao rapida: '))
 print('')
+
+if autonomia == 0:
+    autonomia = 1
+if troca_de_oleo == 0:
+    troca_de_oleo = 1
+if autonomia_revisao == 0:
+    autonomia_revisao = 1
+if troca_freio == 0:
+    troca_freio = 1
+if troca_pneu == 0:
+    troca_pneu = 1
+
 
 consumo = (combustivel / autonomia)
 autonomia_oleo = (oleo/troca_de_oleo)
